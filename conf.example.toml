@@ -1,0 +1,13 @@
+[server]
+address = "[::]"
+port = 2182
+
+[upstream]
+address = "0.0.0.0"
+port = 2181
+
+
+[[circuit_break]]
+name = "block getChildren"
+regex = "/hello*"
+opcode = [8, 12, 1]
